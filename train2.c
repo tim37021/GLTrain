@@ -46,7 +46,12 @@ int main(void)
 	glViewport(0, 0, 600, 600);
 	
 	glMatrixMode(GL_MODELVIEW);
-	glRotatef(.1f, 0, 0, 1);
+	//glRotatef(.1f, 0, 0, 1);
+
+	/* Bonus 2 */
+	//glLoadIdentity();
+	//glTranslatef(0.5f, 0.f, 0.f);
+	/***********/
 
         glBegin(GL_TRIANGLES);
         glColor3f(1.f, 0.f, 0.f);
