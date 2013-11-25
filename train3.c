@@ -44,6 +44,7 @@ int main(void)
 	/*******HINT*******/
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
+	glOrtho(0, 640, 480, 0, -100, 100);
 
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
