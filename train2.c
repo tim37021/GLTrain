@@ -31,7 +31,7 @@ int main(void)
     glfwSetErrorCallback(error_callback);
     if (!glfwInit())
         exit(EXIT_FAILURE);
-    window = glfwCreateWindow(640, 480, "Chapter Two - Your first Triangle", NULL, NULL);
+    window = glfwCreateWindow(600, 600, "Chapter Two - Your first Triangle", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -42,6 +42,11 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {
 	glClear(GL_COLOR_BUFFER_BIT);	
+
+	glViewport(0, 0, 600, 600);
+	
+	glMatrixMode(GL_MODELVIEW);
+	glRotatef(.1f, 0, 0, 1);
 
         glBegin(GL_TRIANGLES);
         glColor3f(1.f, 0.f, 0.f);
